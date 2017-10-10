@@ -2,7 +2,6 @@ const speed = 2 * 6;
 
 class Bubble{
 	constructor(x, y, diameter, moving){
-		//this.ellipse = ellipse(x, y, diameter, diameter);
 		this.moving = moving;
 		this.x = x;
 		this.y = y;
@@ -10,7 +9,6 @@ class Bubble{
 		this.speedX = speed/2 - Math.floor((Math.random()*speed));
 		this.speedY = speed/2 - Math.floor((Math.random()*speed));
 		this.hue = Math.floor((Math.random() * 256));
-		console.log(hue);
 	}
 
 	move(){
