@@ -67,14 +67,14 @@ class Firework{
 			this.y = this.y - this.speedY;
 			this.speedY -= gravity;
 			if(this.speedY < 0){
-				this.explode()
+				this.explode();
 			}
 		}
 	}
 
 	explode() {
 		this.exploded = true;
-		for(let i = 0; i< 30; i++){
+		for(let i = 0; i< 100; i++){
 			this.particles.push(new Particle(this.x, this.y, random(0, 360)));			
 		}
 	}
@@ -84,8 +84,8 @@ class Particle{
 	constructor(x, y, angle){
 		this.x = x;
 		this.y = y;
-		this.speedX = random(1, 2) * Math.cos(angle);
-		this.speedY = random(1, 2) * Math.sin(angle);
+		this.speedX = random(1, 8) * Math.cos(angle);
+		this.speedY = -4 + random(1, 8) * Math.sin(angle);
 	}
 
 	drawParticle(){
